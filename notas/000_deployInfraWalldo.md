@@ -8,11 +8,12 @@
 
 
 ### Python
-- Dependencias:
-```
-pip3 install elasticsearch
-```
-
+- WIP contenedor Docker
+  - Copia del codigo al contenedor
+  - ¿Alguna config como volumen o va todo en la carpeta del codigo?
 
 
 ### MongoDB
+- TODO contenedor Docker
+  - Config como volumen
+  - Volumen para datos persistentes
