@@ -102,4 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-./mongodb/mongo_data
+mongodb/mongo_data
