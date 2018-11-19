@@ -36,10 +36,7 @@ ObjectId('5bf28e8da29d283f9ab121b6')
 ...              {"source": "auth.log",
 ...               "msg": "Failed login from user 'potato'",
 ...               "tags": ["sshd", "failed", "wtf"],
-...               "date": (2018, 11, 19, 10, 23, 1, 830000)}
-...
-...
-... ]
+...               "date": (2018, 11, 19, 10, 23, 1, 830000)}]
 >>> result = posts.insert_many(new_posts)
 >>> result.inserted_ids
 [ObjectId('5bf290e7a29d283f9ab121b7'), ObjectId('5bf290e7a29d283f9ab121b8')]
