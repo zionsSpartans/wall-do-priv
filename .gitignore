@@ -102,8 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-mongodb/mongo_data
+database/mongo_data
 .swp
 .idea
 .idea/
-walldo_py/waldo/mongodb/configbd.py
+walldo_py/waldo/database/configbd.py
