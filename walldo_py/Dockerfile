@@ -7,6 +7,9 @@ RUN apk add openssh-client
 RUN pip3 install elasticsearch pymongo
 
 # Copy walldo code
-COPY ./waldo /
+COPY ./walldo /walldo
 
-WORKDIR /waldo
+WORKDIR /walldo
+
+# Durante el desarrollo arrancar con:
+#   docker run --rm -it -v ./walldo:/walldo walldopy /bin/sh
