@@ -106,3 +106,4 @@ mongodb/mongo_data
 .swp
 .idea
 .idea/
+walldo_py/waldo/mongodb/configbd.py
