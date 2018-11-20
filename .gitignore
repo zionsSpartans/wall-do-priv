@@ -106,5 +106,5 @@ mongodb/mongo_data
 .swp
 .idea
 .idea/
-walldo_py/waldo/walldodb/configbd.py
+walldo_py/walldo/walldodb/configbd.py
 mongodb/mongocreds.env
