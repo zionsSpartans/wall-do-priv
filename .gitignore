@@ -107,3 +107,4 @@ database/mongo_data
 .idea
 .idea/
 walldo_py/waldo/database/configbd.py
+mongodb/mongocreds.env
