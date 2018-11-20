@@ -12,4 +12,4 @@ COPY ./walldo /walldo
 WORKDIR /walldo
 
 # Durante el desarrollo arrancar con:
-#   docker run --rm -it -v ./walldo:/walldo walldopy /bin/sh
+#   docker run --rm -it -v ${PWD}/walldo:/walldo walldopy /bin/sh
