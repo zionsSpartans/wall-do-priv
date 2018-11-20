@@ -102,7 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-walldodb/mongo_data
+mongodb/mongo_data
 .swp
 .idea
 .idea/
