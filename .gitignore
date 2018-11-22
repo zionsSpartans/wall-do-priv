@@ -103,6 +103,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 mongodb/mongo_data
+mongo_data
 .swp
 .idea
 .idea/
