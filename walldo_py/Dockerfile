@@ -13,3 +13,6 @@ WORKDIR /walldo
 
 # Durante el desarrollo arrancar con:
 #   docker run --rm -it -v ${PWD}/walldo:/walldo walldopy /bin/sh
+
+# ENTRYPOINT temporal
+ENTRYPOINT ["/bin/sleep","10000000000000000"]
