@@ -60,6 +60,8 @@ services:
       - ./mongodb/mongo_data/db:/data/db
     ports:
       - 27017:27017
+    networks:
+      - walldo
 
   mongo-express:
     image: mongo-express
@@ -68,6 +70,8 @@ services:
       - 8081:8081
     env_file:
       - ./mongocreds.env
+    networks:
+      - walldo
 
   # Python container
   walldo_py:
