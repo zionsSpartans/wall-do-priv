@@ -15,11 +15,11 @@ vim walldo_py/walldo/walldodb/configbd.py
 
 2. Arrancar con docker compose:
 ```bash
-docker-compose up # Usar '-d' si queremos que arranque en segundo plano
+docker-compose up # Usar '-d' si queremos que arranque en segundo plano 
 ```
 
 
-
+----
 
 ### Info
 - Todos los contenedores estan en la misma red
