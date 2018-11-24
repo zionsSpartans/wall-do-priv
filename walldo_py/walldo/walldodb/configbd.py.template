@@ -3,8 +3,8 @@ import urllib.parse
 
 bd_user = urllib.parse.quote_plus('user')
 bd_pass = urllib.parse.quote_plus('pass')
-host = "localhost"
-database = "pruebas"
+host = "mongo"
+database = "walldodb"
 
 def conn():
   client = MongoClient('mongodb://%s:%s@%s' % (bd_user, bd_pass, host))
