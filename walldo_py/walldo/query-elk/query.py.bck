@@ -1,5 +1,5 @@
-import json
 import elasticsearch.helpers
+import time
 
 from elasticsearch import Elasticsearch
 
@@ -8,13 +8,13 @@ elasticDestination = elasticsearch.Elasticsearch([{"host": "localhost", "port": 
 es = Elasticsearch()
 res = es.search(index="filebeat-6.4.2-2018.11.24", body={"query": {"match_all": {}}})
 print("%d documents found" % res['hits']['total'])
-for doc in res['hits']['hits']:
-    print("%s) %s" % (doc['_id'], doc['_source']['system']))
-    #test = es.get(index="te", doc_type='tweet', id=1)
-    es.delete(index="filebeat-6.4.2-2018.11.24",doc_type="doc",id=doc['_id'])
-    print("hola")
-    #prueba = es.get(index='filebeat-6.4.2-2018.11.24', body=doc)
-    #print(prueba)
-    #es.index(index='indice_principal', doc_type='log', body=doc)
-
-elasticsearch.helpers.reindex(client=elasticSource, source_index="filebeat-6.4.2-2018.11.24", target_index="indice_principal", target_client=elasticDestination)
+scroll_size = res['hits']['total']
+while(scroll_size > 0):
+    for doc in res['hits']['hits']:
+        print("%s) %s" % (doc['_id'], doc['_source']['system']))
+        es.delete(index="filebeat-6.4.2-2018.11.24",doc_type="doc",id=doc['_id'])
+   
+    time.sleep(5)
+    res = es.search(index="filebeat-6.4.2-2018.11.24", body={"query": {"match_all": {}}})
+    
+#elasticsearch.helpers.reindex(client=elasticSource, source_index="filebeat-6.4.2-2018.11.24", target_index="indice_principal", target_client=elasticDestination)
