@@ -1,7 +1,0 @@
-from elasticsearch import Elasticsearch
- 
-es = Elasticsearch()
-res = es.search(index="filebeat-6.4.2-2018.11.20", body={"query": {"match": {'hostname': 'localhost.localdomain'}}})
-print("%d documents found" % res['hits']['total'])
-for doc in res['hits']['hits']:
-    print("%s) %s" % (doc['_id'], doc['_source']))
